@@ -23,6 +23,7 @@ class Batman(object):
 		victim.health -= self.power
 		print "%s took %d damage!" % (self.name, self.power)
 		print "%s has %d health left!" % (self.name, victim.health)
+		print "" #Here I print a blank line so it is easy to see where the attack ends.
 
 class Goon(object):
 	"""This class will be for random enemies, people specifically ones that are NOT Batman.
@@ -42,6 +43,7 @@ class Goon(object):
 		victim.health -= self.power
 		print "%s took %d damage!" % (self.name, self.power)
 		print "%s has %d health left!" % (self.name, victim.health)
+		print ""
 
 #Here we create 1 instance of Batman and 3 instances of Goon (each named differently).
 bman = Batman()
