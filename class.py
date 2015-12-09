@@ -34,7 +34,6 @@ class Goon(object):
 		   letting us name each enemy when we create it."""
 
 		self.power = 10
-		self.defence = 3
 		self.health = 100
 		self.name = name
 	
