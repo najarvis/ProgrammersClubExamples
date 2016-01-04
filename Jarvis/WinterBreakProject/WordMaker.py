@@ -17,9 +17,9 @@ def get_single_letter_data(data, letter):
                 letter_dict[actual_letter] = 1
             last = False
     
-    bad_keys = ['\n', '"', "'", '(', ')', ' ', ';', '?', '.', '!', ',', '-', '\r', '$', '%', '^', '&'] + [chr(x) for x in range(10)]
-    for key in bad_keys:
-        if key in letter_dict:
+    good_keys = [chr(x) for x in range(97, 123)]
+    for key in letter_dict.keys():
+        if key not in good_keys:
             del letter_dict[key]
 
     total = 0.0
@@ -91,7 +91,7 @@ def get_letter(data, letter):
 
 if __name__ == "__main__":
     if len(sys.argv) > 4 or len(sys.argv) < 3:
-        print ">>> Usage: OrderTest.py [filename] [num] ([letter])"
+        print ">>> Usage: WordMaker.py [filename] [num] ([letter])"
     else:
         letter = None
         if len(sys.argv) == 4:
